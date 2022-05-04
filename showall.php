@@ -1,7 +1,7 @@
 <?php
 session_start();
     $k = $_GET['k'];
-    $pdo = new PDO("sqlite:dogger420.db");
+    $pdo = new PDO("sqlite:dogger.db");
     $sql = $pdo->query("SELECT * FROM diary_entries WHERE reach='public' ORDER BY time DESC");
     $rows = $sql->fetchAll();
     include "components/_header.php";
